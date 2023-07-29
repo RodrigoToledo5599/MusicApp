@@ -29,7 +29,7 @@ namespace MusicApp
 
 
             app.MapControllers();
-
+            //"Server=(localdb)\\MSSQLLocalDB;Database=AluraTunes;Trusted_Connection=True;TrustServerCertificate=True"
             app.Run();
         }
     }
