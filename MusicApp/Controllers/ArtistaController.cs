@@ -7,7 +7,7 @@ namespace MusicApp.Controllers
     {
         public IActionResult Index()
         {
-            
+            return NoContent();
         }
     }
 }
