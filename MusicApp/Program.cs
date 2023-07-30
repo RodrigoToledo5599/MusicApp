@@ -24,6 +24,21 @@ namespace MusicApp
 
             var app = builder.Build();
 
+            app.MapGet("/",()=>"<html>OLA FILHA DA PUTA!!!!!</html>" );
+
+            app.MapGet("/Artistas", async (AluraTunesContext db) => await db.Artista.Where(c => c.ArtistaId<100).ToListAsync());
+
+            //app.MapPost("/");
+
+
+
+
+
+
+
+
+
+
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
@@ -37,7 +52,6 @@ namespace MusicApp
 
 
             app.MapControllers();
-            //"Server=(localdb)\\MSSQLLocalDB;Database=AluraTunes;Trusted_Connection=True;TrustServerCertificate=True"
             app.Run();
         }
     }
